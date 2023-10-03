@@ -7,11 +7,9 @@ from collections import deque
 input = int(sys.stdin.readline())
 queue = deque([i for i in range(1, input+1)])
 
-# while len(queue) > 1:
-#     queue.popleft()
-#     first = queue[0]
-#     queue.popleft()
-#     queue.append(first)
-# print(queue[0])
-print(queue.popleft())
-print(queue)
+while len(queue) > 1:
+    queue.popleft()
+    first = queue[0]
+    queue.popleft()
+    queue.append(first)
+print(queue[0])
